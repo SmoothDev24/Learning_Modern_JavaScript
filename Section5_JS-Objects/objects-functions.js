@@ -29,9 +29,7 @@ console.log(bookSummary.pageCountSummary)
 
 //Challenge Area
 //Create function - that takes in Fahrenheit - and returns an object with all three tempurature metrics
-let tempMetric = {
 
-}
 function covertTemp(temp) {
     return{
      fahrenheit: temp,
@@ -40,4 +38,21 @@ function covertTemp(temp) {
     }
 }
 let temps = covertTemp(70)
-console.log(temps)
+console.log(temps.celsius)
+
+let myCar = {
+    year: 1972,
+    make: 'Chevy',
+    model: 'Monte Carlo',
+    topSpeed: 130
+}
+
+function vehicle(car) {
+    return{
+        typeSummary:`I have a ${myCar.make} ${myCar.model}.`,
+        detailedSummary: `My car is a ${myCar.year} ${myCar.make} ${myCar.model} and it has a top speed of ${myCar.topSpeed}mph.`
+    }   
+}
+
+let myAuto = vehicle(myCar)
+console.log(myAuto.detailedSummary)
