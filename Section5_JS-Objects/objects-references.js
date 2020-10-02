@@ -54,17 +54,17 @@ function resetAccount(account){
 resetAccount(myAccount)
 
 function getAccountSummary() {
-    addIncome(myAccount, 2000)
-    addExpense(myAccount, 100)
-    addExpense(myAccount,750)
-    getBalance(myAccount)
     return{
         funds: `Account for  ${myAccount.name} has $${myAccount.balance}. $${myAccount.income} in income. $${myAccount.expenses} in expenses.`
-    }
-
-    
+    }    
 }
+addIncome(myAccount, 2000)
+addExpense(myAccount, 100)
+addExpense(myAccount,750)
+getBalance(myAccount)
 let myFunds = getAccountSummary()
+console.log(myAccount)
 let meBroke = resetAccount(myAccount)
 console.log(myFunds.funds)
 console.log(meBroke.accountZero)
+console.log(myAccount)
